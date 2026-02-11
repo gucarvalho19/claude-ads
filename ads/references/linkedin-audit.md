@@ -97,6 +97,15 @@
 
 ---
 
+## Context Notes
+
+- **Connected TV Ads (2025)**: LinkedIn extended reach to CTV inventory via partnerships, allowing B2B brand campaigns on streaming platforms.
+- **BrandLink (2025)**: Premium video placement alongside trusted publisher content on LinkedIn. Ideal for awareness-stage B2B campaigns.
+- **Live Event Ads (2025)**: Sponsored LinkedIn Live events with built-in registration and reminder flows. Effective for webinar-driven lead gen.
+- **Accelerate campaigns**: LinkedIn's AI-optimized campaign type delivers 42% lower CPA and 21% lower CPL on average. Recommended for advertisers with sufficient conversion history.
+
+---
+
 ## LinkedIn-Specific Context
 
 | Fact | Value |

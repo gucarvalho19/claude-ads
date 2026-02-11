@@ -17,8 +17,9 @@ description: >
 2. Read `ads/references/tiktok-audit.md` for full 25-check audit
 3. Read `ads/references/benchmarks.md` for TikTok-specific benchmarks
 4. Read `ads/references/platform-specs.md` for creative specifications
-5. Evaluate all applicable checks as PASS, WARNING, or FAIL
-6. Calculate TikTok Ads Health Score (0-100)
+5. Read `ads/references/scoring-system.md` for weighted scoring algorithm
+6. Evaluate all applicable checks as PASS, WARNING, or FAIL
+7. Calculate TikTok Ads Health Score (0-100)
 7. Generate findings report with action plan
 
 ## What to Analyze
@@ -45,7 +46,7 @@ description: >
 
 ### Bidding & Budget (20% weight)
 - Bid strategy matches goal: Lowest Cost for volume, Cost Cap for efficiency (T11)
-- Daily budget ≥20x target CPA per ad group (T12)
+- Daily budget ≥50x target CPA per ad group (T12)
 - Learning phase: ≥50 conversions per 7 days per ad group (T13)
 - No edits during learning phase (resets learning)
 
@@ -137,7 +138,7 @@ If e-commerce, evaluate TikTok Shop setup:
 | Creatives per ad group | ≥6 | 3-5 | <3 |
 | Video watch time | ≥6s | 3-6s | <3s |
 | Learning conversions | ≥50/week | 30-50/week | <30/week |
-| Daily budget | ≥20x CPA | 10-20x CPA | <10x CPA |
+| Daily budget | ≥50x CPA | 20-49x CPA | <20x CPA |
 | Creative age (declining) | <7 days | 7-14 days | >14 days |
 
 ## Output

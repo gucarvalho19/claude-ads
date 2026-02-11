@@ -73,7 +73,7 @@ Detect business type from ad account signals:
 Hard rules — never violate these:
 - Never recommend Broad Match without Smart Bidding (Google)
 - 3x Kill Rule: flag any ad group/campaign with CPA >3x target for pause
-- Budget sufficiency: Meta ≥5x CPA per ad set, TikTok ≥20x CPA per ad group
+- Budget sufficiency: Meta ≥5x CPA per ad set, TikTok ≥50x CPA per ad group
 - Learning phase: never recommend edits during active learning phase
 - Compliance: always check Special Ad Categories for housing/employment/credit/finance
 - Creative: never run silent video ads on TikTok (sound-on platform)

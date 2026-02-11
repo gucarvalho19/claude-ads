@@ -5,7 +5,6 @@ description: >
   and Microsoft for format diversity, fatigue signals, platform-native
   content, and spec compliance.
 model: sonnet
-color: magenta
 maxTurns: 20
 tools: Read, Bash, Write, Glob, Grep
 ---

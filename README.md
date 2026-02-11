@@ -1,6 +1,6 @@
 # Claude Ads
 
-Comprehensive paid advertising audit and optimization skill for Claude Code. Covers Google Ads, Meta Ads, YouTube Ads, LinkedIn Ads, TikTok Ads, and Microsoft Ads with 186 audit checks, industry-specific templates, and parallel subagent delegation.
+Comprehensive paid advertising audit and optimization skill for Claude Code. Covers Google Ads, Meta Ads, YouTube Ads, LinkedIn Ads, TikTok Ads, and Microsoft Ads with 190 audit checks, industry-specific templates, and parallel subagent delegation.
 
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/claude-code)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -25,7 +25,10 @@ irm https://raw.githubusercontent.com/AgriciDaniel/claude-ads/main/install.ps1 |
 git clone https://github.com/AgriciDaniel/claude-ads.git
 cd claude-ads
 ./install.sh          # Unix/macOS/Linux
-# .\install.ps1       # Windows PowerShell
+```
+
+```powershell
+.\install.ps1         # Windows PowerShell
 ```
 
 ## Quick Start
@@ -104,7 +107,7 @@ Industry-specific templates with platform mix, campaign architecture, creative s
 
 ## Features
 
-### 186 Audit Checks
+### 190 Audit Checks
 Comprehensive coverage across all platforms with weighted severity scoring:
 
 | Platform | Checks | Key Areas |
@@ -161,12 +164,20 @@ Hard rules enforced during every audit:
 ## Requirements
 
 - Claude Code CLI
-- No Python dependencies (pure Claude Code skill)
+- Python 3.10+ with Playwright (optional, for live landing page analysis)
 
 ## Uninstall
 
+### Unix/macOS/Linux
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-ads/main/uninstall.sh | bash
+```
+
+### Windows PowerShell
+
+```powershell
+irm https://raw.githubusercontent.com/AgriciDaniel/claude-ads/main/uninstall.ps1 | iex
 ```
 
 ## Related Projects

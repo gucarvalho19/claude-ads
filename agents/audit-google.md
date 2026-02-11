@@ -5,7 +5,6 @@ description: >
   account structure, keywords, Quality Score, ad assets, PMax, bidding,
   and settings.
 model: sonnet
-color: blue
 maxTurns: 20
 tools: Read, Bash, Write, Glob, Grep
 ---

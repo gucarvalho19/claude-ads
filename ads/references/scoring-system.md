@@ -105,6 +105,18 @@ Quick Win examples:
 - Fix location targeting method (Critical, 2 min)
 - Enable Advantage+ Placements (Medium, 2 min)
 
+## Weighting Rationale
+
+Category weights are calibrated for paid advertising accounts where conversion tracking infrastructure is the highest-impact factor (25-30% weight across platforms). This differs from generic scoring systems because:
+- Broken tracking invalidates all optimization decisions downstream
+- Creative and targeting quality follow tracking in priority
+- Settings and compliance are important but have lower direct revenue impact
+- Weights sum to 100% per platform, enabling direct cross-platform comparison
+
+The grading thresholds (A=90-100, B=75-89, C=60-74, D=40-59, F=<40) use wider bands than academic-style scoring because ad account health is typically distributed lower — a score of 75+ represents genuinely well-managed accounts.
+
+---
+
 ## Cross-Platform Aggregate Score
 
 When auditing multiple platforms, calculate per-platform scores then aggregate:

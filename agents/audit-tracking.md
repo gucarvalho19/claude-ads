@@ -5,7 +5,6 @@ description: >
   tracking, event configuration, and attribution across LinkedIn, TikTok,
   and Microsoft platforms.
 model: sonnet
-color: green
 maxTurns: 20
 tools: Read, Bash, Write, Glob, Grep
 ---

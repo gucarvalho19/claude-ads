@@ -5,7 +5,6 @@ description: >
   ad policies, privacy requirements, campaign settings, and performance
   benchmarks across LinkedIn, TikTok, and Microsoft.
 model: sonnet
-color: red
 maxTurns: 20
 tools: Read, Bash, Write, Glob, Grep
 ---

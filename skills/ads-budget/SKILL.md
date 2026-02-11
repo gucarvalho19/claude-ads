@@ -51,7 +51,7 @@ description: >
 | Google PMax | $50/day | Sufficient for algorithm optimization |
 | Meta | $20/day per ad set | ≥5x target CPA per ad set |
 | LinkedIn | $50/day Sponsored Content | 15+ conversions/month |
-| TikTok | $50/day campaign, $20/day ad group | ≥20x target CPA per ad group |
+| TikTok | $50/day campaign, $20/day ad group | ≥50x target CPA per ad group |
 | Microsoft | No strict minimum | Sufficient for stable delivery |
 
 ## Bidding Strategy Evaluation
@@ -90,7 +90,7 @@ Start
 - **Lowest Cost**: maximize conversions within budget (volume)
 - **Cost Cap**: set maximum CPA (efficiency)
 - **Bid Cap**: maximum bid per impression
-- Budget ≥20x CPA per ad group for learning phase exit
+- Budget ≥50x CPA per ad group for learning phase exit
 
 ### Microsoft Bidding
 - Mirror Google strategy but bid 20-35% lower

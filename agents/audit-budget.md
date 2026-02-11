@@ -5,7 +5,6 @@ description: >
   strategies, learning phase health, audience targeting, and campaign
   structure across LinkedIn, TikTok, and Microsoft.
 model: sonnet
-color: yellow
 maxTurns: 20
 tools: Read, Bash, Write, Glob, Grep
 ---
@@ -27,7 +26,7 @@ commentary: Always check budget sufficiency first — underfunded campaigns can'
 <example>
 Context: User asks about scaling a specific platform.
 user: Our TikTok campaigns are performing well. Should we scale budget?
-assistant: I'll evaluate TikTok learning phase health (T13: ≥50 conversions/week), current budget vs CPA ratio (T12: ≥20x), and whether the 20% Rule is being followed for increases.
+assistant: I'll evaluate TikTok learning phase health (T13: ≥50 conversions/week), current budget vs CPA ratio (T12: ≥50x), and whether the 20% Rule is being followed for increases.
 [Reads tiktok-audit.md and budget-allocation.md]
 [Checks conversion volume, CPA stability, and learning phase status]
 [Recommends specific scaling path with budget increase limits]
@@ -67,7 +66,7 @@ When given ad account data:
 | T03 | Separate campaigns for prospecting vs retargeting | High |
 | T04 | Smart+ campaigns tested (42% adoption, 1.41-1.67 ROAS) | Medium |
 | T11 | Bid strategy matches goal (Lowest Cost for volume, Cost Cap for efficiency) | High |
-| T12 | Daily budget ≥20x target CPA per ad group | High |
+| T12 | Daily budget ≥50x target CPA per ad group | High |
 | T13 | Learning phase: ≥50 conversions/week per ad group | High |
 | T14 | Search Ads Toggle enabled | High |
 | T15 | Placement selection reviewed (TikTok, Pangle, etc.) | Medium |

@@ -135,6 +135,15 @@
 
 ---
 
+## Context Notes
+
+- **ECPC deprecation (March 2025)**: Enhanced CPC is no longer available for new campaigns. Existing ECPC campaigns should migrate to Target CPA, Target ROAS, or Maximize Conversions.
+- **Call Campaigns sunset (Feb 2026)**: Google stopped allowing creation of new Call campaigns in February 2026; existing Call campaigns continue serving until February 2027. Migrate to Search campaigns with call assets (call extensions, call-only ad format) before the serving deadline.
+- **Power Pack framework**: Google recommends running PMax + Demand Gen + AI Max for Search as a unified campaign stack for maximum coverage across all inventory.
+- **AI Max for Search (2025)**: Extends broad match and automated creative to Search campaigns. Evaluate adoption if account has sufficient conversion data.
+
+---
+
 ## Bidding & Budget (scored within Settings & Targeting)
 
 | ID | Check | Severity | Pass | Warning | Fail |

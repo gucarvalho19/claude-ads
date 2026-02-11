@@ -89,6 +89,14 @@
 
 ---
 
+## Context Notes
+
+- **Detailed targeting exclusions removal (2025-2026)**: Meta phased out detailed targeting exclusions starting March 2025, with full removal by January 2026. Advertisers must now use Custom Audience exclusions or Advantage+ Audience instead.
+- **Flexible Ads (2024)**: Format launched mid-2024 that automatically optimizes creative elements (headline, image, video) per placement. Evaluate adoption alongside Advantage+ Creative enhancements.
+- **Financial Products Special Ad Category (Jan 2025)**: Financial products (loans, insurance, credit cards, investment services) are now enforced as a Special Ad Category with the same targeting restrictions as Housing/Employment/Credit.
+
+---
+
 ## Quick Wins (Meta)
 
 | Check | Fix | Time |

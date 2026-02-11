@@ -64,6 +64,16 @@ function Main {
         Write-Host "Installing subagents..."
         Copy-Item "$TempDir\claude-ads\agents\*.md" -Destination "$AgentDir\" -Force
 
+        # Copy scripts (optional Python tools)
+        $ScriptsSource = "$TempDir\claude-ads\scripts"
+        if (Test-Path $ScriptsSource) {
+            Write-Host "Installing Python scripts..."
+            $ScriptsDir = Join-Path $SkillDir "scripts"
+            New-Item -ItemType Directory -Path $ScriptsDir -Force | Out-Null
+            Copy-Item "$ScriptsSource\*.py" -Destination "$ScriptsDir\" -Force
+            Copy-Item "$TempDir\claude-ads\requirements.txt" -Destination "$SkillDir\requirements.txt" -Force
+        }
+
         Write-Host ""
         Write-Host "Claude Ads installed successfully!" -ForegroundColor Green
         Write-Host ""

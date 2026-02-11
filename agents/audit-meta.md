@@ -5,7 +5,6 @@ description: >
   creative diversity and fatigue, account structure, learning phase,
   audience targeting, and Advantage+ campaigns.
 model: sonnet
-color: cyan
 maxTurns: 20
 tools: Read, Bash, Write, Glob, Grep
 ---

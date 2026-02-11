@@ -16,8 +16,9 @@ description: >
 1. Collect creative assets or performance data from active platforms
 2. Read `ads/references/platform-specs.md` for creative specifications
 3. Read `ads/references/benchmarks.md` for CTR/engagement benchmarks
-4. Evaluate creative quality per platform
-5. Assess cross-platform creative consistency
+4. Read `ads/references/scoring-system.md` for weighted scoring algorithm
+5. Evaluate creative quality per platform
+6. Assess cross-platform creative consistency
 6. Generate production priority recommendations
 
 ## Per-Platform Assessment

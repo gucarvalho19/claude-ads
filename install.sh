@@ -54,6 +54,15 @@ main() {
     echo "→ Installing subagents..."
     cp "${TEMP_DIR}/claude-ads/agents/"*.md "${AGENT_DIR}/" 2>/dev/null || true
 
+    # Copy scripts (optional Python tools)
+    SCRIPTS_DIR="${HOME}/.claude/skills/ads/scripts"
+    if [ -d "${TEMP_DIR}/claude-ads/scripts" ]; then
+        echo "→ Installing Python scripts..."
+        mkdir -p "${SCRIPTS_DIR}"
+        cp "${TEMP_DIR}/claude-ads/scripts/"*.py "${SCRIPTS_DIR}/"
+        cp "${TEMP_DIR}/claude-ads/requirements.txt" "${SKILL_DIR}/requirements.txt"
+    fi
+
     echo ""
     echo "✓ Claude Ads installed successfully!"
     echo ""

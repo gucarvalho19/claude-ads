@@ -44,6 +44,12 @@ screenshots/
 # Internal QA artifacts
 AUDIT-REPORT.md
 
+# Claude Code
+.claude/
+
+# Firebase
+firebase-debug*.log
+
 # Dashboard
 dashboard/dist/
 dashboard/node_modules/

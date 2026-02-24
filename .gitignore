@@ -43,3 +43,7 @@ screenshots/
 
 # Internal QA artifacts
 AUDIT-REPORT.md
+
+# Dashboard
+dashboard/dist/
+dashboard/node_modules/

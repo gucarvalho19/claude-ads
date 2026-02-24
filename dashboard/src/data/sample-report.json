@@ -1,0 +1,975 @@
+{
+  "generatedAt": "2026-02-24T14:30:00Z",
+  "businessType": "CloudSync Pro - B2B SaaS Project Management Tool",
+  "industry": "saas",
+  "totalScore": 72,
+  "totalGrade": "C",
+  "platforms": [
+    {
+      "platform": "google",
+      "name": "Google Ads",
+      "score": 78,
+      "grade": "B",
+      "budgetShare": 0.40,
+      "categories": [
+        {
+          "name": "Conversion Tracking",
+          "weight": 0.25,
+          "score": 85,
+          "totalChecks": 11,
+          "passed": 8,
+          "warnings": 2,
+          "failed": 1,
+          "na": 0
+        },
+        {
+          "name": "Wasted Spend",
+          "weight": 0.20,
+          "score": 65,
+          "totalChecks": 8,
+          "passed": 4,
+          "warnings": 2,
+          "failed": 2,
+          "na": 0
+        },
+        {
+          "name": "Account Structure",
+          "weight": 0.15,
+          "score": 80,
+          "totalChecks": 12,
+          "passed": 8,
+          "warnings": 3,
+          "failed": 1,
+          "na": 0
+        },
+        {
+          "name": "Keywords & Quality Score",
+          "weight": 0.15,
+          "score": 75,
+          "totalChecks": 8,
+          "passed": 5,
+          "warnings": 2,
+          "failed": 1,
+          "na": 0
+        },
+        {
+          "name": "Ads & Assets",
+          "weight": 0.15,
+          "score": 82,
+          "totalChecks": 12,
+          "passed": 9,
+          "warnings": 2,
+          "failed": 1,
+          "na": 0
+        },
+        {
+          "name": "Settings & Targeting",
+          "weight": 0.10,
+          "score": 70,
+          "totalChecks": 12,
+          "passed": 6,
+          "warnings": 4,
+          "failed": 2,
+          "na": 0
+        }
+      ],
+      "checks": [
+        {
+          "id": "G42",
+          "check": "Conversion actions defined",
+          "category": "Conversion Tracking",
+          "severity": "Critical",
+          "status": "PASS",
+          "finding": "3 primary conversion actions configured: Demo Request, Free Trial Signup, and Contact Form. All firing consistently with 142 conversions in the last 30 days.",
+          "recommendation": "No action needed. Consider adding a qualified lead conversion action for downstream funnel tracking."
+        },
+        {
+          "id": "G43",
+          "check": "Enhanced conversions enabled",
+          "category": "Conversion Tracking",
+          "severity": "Critical",
+          "status": "PASS",
+          "finding": "Enhanced conversions are active for Demo Request and Free Trial Signup events. Match rates averaging 78%.",
+          "recommendation": "No action needed. Match rate is above the 70% threshold. Monitor monthly for degradation."
+        },
+        {
+          "id": "G47",
+          "check": "Micro vs macro separation",
+          "category": "Conversion Tracking",
+          "severity": "High",
+          "status": "WARNING",
+          "finding": "Page View and Scroll Depth events are configured as 'Secondary' but the Newsletter Signup event is set as 'Primary' alongside Demo Request. Newsletter has a $2 static value which may inflate ROAS calculations.",
+          "recommendation": "Reclassify Newsletter Signup as a Secondary conversion action. Only Demo Request, Free Trial, and Contact Form should be Primary for bid optimization.",
+          "estimatedTime": "5 min",
+          "isQuickWin": true
+        },
+        {
+          "id": "G-CT1",
+          "check": "No duplicate counting",
+          "category": "Conversion Tracking",
+          "severity": "Critical",
+          "status": "FAIL",
+          "finding": "Both GA4 import and native Google Ads tag are counting the Demo Request conversion. This is inflating reported conversions by approximately 23%, causing Smart Bidding to optimize toward a misleadingly low CPA.",
+          "recommendation": "Remove the GA4 imported Demo Request goal and rely solely on the native Google Ads conversion tag, or vice versa. Verify with the Conversions > Diagnostics report that counts normalize within 48 hours.",
+          "estimatedTime": "10 min",
+          "isQuickWin": true
+        },
+        {
+          "id": "G13",
+          "check": "Search term audit recency",
+          "category": "Wasted Spend",
+          "severity": "Critical",
+          "status": "WARNING",
+          "finding": "Search terms were last reviewed 22 days ago. Multiple new irrelevant terms have accumulated including 'free project management', 'project management jobs', and 'project management certification'.",
+          "recommendation": "Conduct immediate search term review. Add 'free', 'jobs', 'certification', 'salary', and 'course' as negative keywords. Set a recurring bi-weekly calendar reminder for search term audits.",
+          "estimatedTime": "15 min"
+        },
+        {
+          "id": "G16",
+          "check": "Wasted spend on irrelevant terms",
+          "category": "Wasted Spend",
+          "severity": "Critical",
+          "status": "FAIL",
+          "finding": "11.2% of total search spend ($2,016/mo) is going to irrelevant search terms including informational queries, job searches, and competitor brand misspellings. This exceeds the 5% threshold significantly.",
+          "recommendation": "Add comprehensive negative keyword lists for job-related, educational, free-tier, and competitor terms. Implement weekly search term reviews until irrelevant spend drops below 5%. Estimated monthly savings: $1,500+.",
+          "estimatedTime": "30 min",
+          "isQuickWin": true
+        },
+        {
+          "id": "G05",
+          "check": "Brand vs Non-Brand separation",
+          "category": "Account Structure",
+          "severity": "Critical",
+          "status": "PASS",
+          "finding": "Brand campaign 'CloudSync_Brand_US_Search' is properly separated from non-brand campaigns. Brand exclusion lists are applied to non-brand campaigns.",
+          "recommendation": "No action needed. Brand campaign is capturing 94% brand impression share."
+        },
+        {
+          "id": "G12",
+          "check": "Network settings",
+          "category": "Account Structure",
+          "severity": "High",
+          "status": "FAIL",
+          "finding": "Display Network is enabled on 2 of 4 Search campaigns ('CloudSync_NB_Competitors' and 'CloudSync_NB_Features'). Display traffic accounts for $890/mo with 0 conversions in the last 60 days.",
+          "recommendation": "Immediately disable Display Network on all Search campaigns. This is wasting approximately $890/month with zero return. If Display is desired, create a dedicated Display campaign with appropriate targeting.",
+          "estimatedTime": "2 min",
+          "isQuickWin": true
+        },
+        {
+          "id": "G20",
+          "check": "Average Quality Score",
+          "category": "Keywords & Quality Score",
+          "severity": "High",
+          "status": "WARNING",
+          "finding": "Account-wide impression-weighted Quality Score is 5.8, below the target of 7. The 'project management software' and 'team collaboration tool' ad groups have QS of 4-5 due to landing page experience scores.",
+          "recommendation": "Improve landing page relevance for low-QS ad groups by aligning H1 tags and content with keyword themes. Test dedicated landing pages for 'project management' and 'collaboration' themes. Expected QS improvement: +1-2 points in 4-6 weeks."
+        },
+        {
+          "id": "G24",
+          "check": "Landing page experience",
+          "category": "Keywords & Quality Score",
+          "severity": "High",
+          "status": "FAIL",
+          "finding": "32% of keywords show 'Below Average' landing page experience. The main landing page at cloudsyncpro.com/demo has an LCP of 4.2s on mobile, well above the 2.5s threshold.",
+          "recommendation": "Optimize the demo landing page for Core Web Vitals: compress hero image, defer non-critical JavaScript, implement lazy loading. Target LCP under 2.5s. Consider AMP landing pages for mobile traffic.",
+          "estimatedTime": "2-4 hours"
+        },
+        {
+          "id": "G29",
+          "check": "RSA Ad Strength",
+          "category": "Ads & Assets",
+          "severity": "High",
+          "status": "PASS",
+          "finding": "8 of 10 RSAs rated 'Good' or 'Excellent'. Two RSAs in the competitor campaign rated 'Average' but performing well on CTR (5.1%).",
+          "recommendation": "No urgent action. The two 'Average' RSAs can be improved by adding more unique headlines that highlight differentiators vs competitors."
+        },
+        {
+          "id": "G50",
+          "check": "Sitelink extensions",
+          "category": "Settings & Targeting",
+          "severity": "High",
+          "status": "WARNING",
+          "finding": "Only 2 sitelinks configured across campaigns: 'Pricing' and 'Features'. Missing key pages like 'Free Trial', 'Customer Stories', 'Integrations', and 'Enterprise'.",
+          "recommendation": "Add at least 4 sitelinks per campaign including: Free Trial, Customer Stories/Case Studies, Integrations, Enterprise Plan, and Product Tour. More sitelinks improve ad rank and CTR.",
+          "estimatedTime": "10 min",
+          "isQuickWin": true
+        }
+      ]
+    },
+    {
+      "platform": "meta",
+      "name": "Meta Ads",
+      "score": 65,
+      "grade": "C",
+      "budgetShare": 0.30,
+      "categories": [
+        {
+          "name": "Pixel/CAPI Health",
+          "weight": 0.30,
+          "score": 60,
+          "totalChecks": 10,
+          "passed": 5,
+          "warnings": 2,
+          "failed": 3,
+          "na": 0
+        },
+        {
+          "name": "Creative",
+          "weight": 0.30,
+          "score": 55,
+          "totalChecks": 12,
+          "passed": 4,
+          "warnings": 4,
+          "failed": 4,
+          "na": 0
+        },
+        {
+          "name": "Account Structure",
+          "weight": 0.20,
+          "score": 75,
+          "totalChecks": 16,
+          "passed": 10,
+          "warnings": 4,
+          "failed": 2,
+          "na": 0
+        },
+        {
+          "name": "Audience & Targeting",
+          "weight": 0.20,
+          "score": 72,
+          "totalChecks": 6,
+          "passed": 3,
+          "warnings": 2,
+          "failed": 1,
+          "na": 0
+        }
+      ],
+      "checks": [
+        {
+          "id": "M02",
+          "check": "Conversions API (CAPI) active",
+          "category": "Pixel/CAPI Health",
+          "severity": "Critical",
+          "status": "FAIL",
+          "finding": "CAPI is not deployed. Relying solely on the browser-side Meta Pixel, which loses an estimated 30-40% of conversion data due to iOS 14.5+ App Tracking Transparency opt-outs and browser privacy restrictions.",
+          "recommendation": "Deploy CAPI via Meta's CAPI Gateway (simplest option, ~15 min setup) or integrate server-side through GTM Server-Side. This is the single highest-impact fix for Meta performance. Expected: 20-30% improvement in reported conversions and signal quality.",
+          "estimatedTime": "15 min",
+          "isQuickWin": true
+        },
+        {
+          "id": "M04",
+          "check": "Event Match Quality (EMQ)",
+          "category": "Pixel/CAPI Health",
+          "severity": "Critical",
+          "status": "FAIL",
+          "finding": "EMQ score is 4.2 for the Lead event, well below the 8.0 target. Only email is being passed as a customer information parameter. Missing: phone, first name, last name, city, state, and ZIP.",
+          "recommendation": "Pass additional customer information parameters with conversion events: at minimum add first_name, last_name, and phone. With CAPI deployment (M02), EMQ should improve to 7.0+. Target EMQ of 8.0+ for optimal matching.",
+          "estimatedTime": "1-2 hours"
+        },
+        {
+          "id": "M03",
+          "check": "Event deduplication",
+          "category": "Pixel/CAPI Health",
+          "severity": "Critical",
+          "status": "N/A",
+          "finding": "Not applicable — CAPI is not yet deployed (see M02). Deduplication requires both Pixel and CAPI to be sending events simultaneously.",
+          "recommendation": "Implement event deduplication with matching event_id parameters when CAPI is deployed. This prevents double-counting conversions."
+        },
+        {
+          "id": "M01",
+          "check": "Meta Pixel installed",
+          "category": "Pixel/CAPI Health",
+          "severity": "Critical",
+          "status": "PASS",
+          "finding": "Meta Pixel is firing correctly on all pages including the marketing site, blog, and demo booking flow. PageView, Lead, and CompleteRegistration events are tracked.",
+          "recommendation": "No action needed. Pixel health is good. Prioritize CAPI deployment (M02) to complement browser-side tracking."
+        },
+        {
+          "id": "M25",
+          "check": "Creative format diversity",
+          "category": "Creative",
+          "severity": "Critical",
+          "status": "FAIL",
+          "finding": "Only static image ads are running across all ad sets. No video or carousel formats are being tested. This severely limits Meta's Andromeda algorithm from finding optimal placements, especially Reels and Stories.",
+          "recommendation": "Create 9:16 vertical video ads (even simple motion graphics or screen recordings of the product) and carousel ads showcasing features. Target at least 3 formats per ad set. Video is critical for Reels/Stories placement which now represents 40%+ of Meta inventory.",
+          "estimatedTime": "2-3 hours"
+        },
+        {
+          "id": "M28",
+          "check": "Creative fatigue detection",
+          "category": "Creative",
+          "severity": "Critical",
+          "status": "FAIL",
+          "finding": "3 of 5 active creatives show CTR decline >25% over the last 14 days, with ad set frequency at 4.8 for prospecting audiences. The 'Product Dashboard Screenshot' ad has been running for 67 days without refresh.",
+          "recommendation": "Immediately rotate in fresh creative. Pause the 3 fatigued ads and replace with new variations. Implement a 30-day creative refresh cycle. For B2B SaaS, test: customer testimonial quotes, product UI animations, before/after workflow comparisons, and data-driven result ads.",
+          "estimatedTime": "2-4 hours"
+        },
+        {
+          "id": "M-CR1",
+          "check": "Creative freshness",
+          "category": "Creative",
+          "severity": "High",
+          "status": "FAIL",
+          "finding": "No new creative assets have been tested in the last 67 days. All 5 active creatives were launched on December 19, 2025. Meta recommends testing new creative every 2-4 weeks.",
+          "recommendation": "Launch at least 3 new creative concepts immediately. Establish a bi-weekly creative testing cadence. Consider using Meta's Advantage+ Creative to auto-optimize elements. Budget 20-30% of Meta spend for creative testing.",
+          "estimatedTime": "1-2 days"
+        },
+        {
+          "id": "M13",
+          "check": "Learning phase status",
+          "category": "Account Structure",
+          "severity": "Critical",
+          "status": "WARNING",
+          "finding": "3 of 8 ad sets (37.5%) are in 'Learning Limited' status. The 'SaaS Decision Makers' and 'IT Directors' ad sets have daily budgets of $45 each with a target CPA of $85, providing only ~0.5x CPA per day.",
+          "recommendation": "Consolidate the 3 Learning Limited ad sets into 1-2 broader ad sets to aggregate conversion signals. Increase daily budget to at least 5x target CPA ($425/day) per ad set, or lower the optimization event to a higher-funnel action like landing page view.",
+          "estimatedTime": "30 min"
+        },
+        {
+          "id": "M19",
+          "check": "Audience overlap",
+          "category": "Audience & Targeting",
+          "severity": "High",
+          "status": "WARNING",
+          "finding": "34% overlap detected between 'SaaS Decision Makers' and 'IT Directors' ad sets in the prospecting campaign. This is causing self-competition and inflating CPMs.",
+          "recommendation": "Use the Audience Overlap tool in Ads Manager to map all overlaps. Consolidate overlapping audiences into a single ad set or use exclusions. For audiences with >20% overlap, merge them to improve delivery efficiency."
+        },
+        {
+          "id": "M23",
+          "check": "Exclusion audiences",
+          "category": "Audience & Targeting",
+          "severity": "High",
+          "status": "FAIL",
+          "finding": "No purchaser or existing customer exclusions are applied to the prospecting campaigns. Current customers who already have CloudSync Pro subscriptions are seeing and clicking on acquisition ads, wasting estimated $380/month.",
+          "recommendation": "Create a Custom Audience from the customer email list and exclude it from all prospecting campaigns. Also exclude anyone who completed the Free Trial Signup in the last 90 days. Upload the customer list and set up automated syncing.",
+          "estimatedTime": "15 min",
+          "isQuickWin": true
+        }
+      ]
+    },
+    {
+      "platform": "linkedin",
+      "name": "LinkedIn Ads",
+      "score": 82,
+      "grade": "B",
+      "budgetShare": 0.20,
+      "categories": [
+        {
+          "name": "Technical Setup",
+          "weight": 0.25,
+          "score": 90,
+          "totalChecks": 2,
+          "passed": 2,
+          "warnings": 0,
+          "failed": 0,
+          "na": 0
+        },
+        {
+          "name": "Audience Quality",
+          "weight": 0.25,
+          "score": 85,
+          "totalChecks": 7,
+          "passed": 5,
+          "warnings": 2,
+          "failed": 0,
+          "na": 0
+        },
+        {
+          "name": "Creative & Formats",
+          "weight": 0.20,
+          "score": 78,
+          "totalChecks": 4,
+          "passed": 2,
+          "warnings": 1,
+          "failed": 1,
+          "na": 0
+        },
+        {
+          "name": "Lead Gen Forms",
+          "weight": 0.15,
+          "score": 80,
+          "totalChecks": 2,
+          "passed": 1,
+          "warnings": 1,
+          "failed": 0,
+          "na": 0
+        },
+        {
+          "name": "Bidding & Budget",
+          "weight": 0.15,
+          "score": 70,
+          "totalChecks": 2,
+          "passed": 1,
+          "warnings": 0,
+          "failed": 1,
+          "na": 0
+        }
+      ],
+      "checks": [
+        {
+          "id": "L01",
+          "check": "Insight Tag installed",
+          "category": "Technical Setup",
+          "severity": "Critical",
+          "status": "PASS",
+          "finding": "LinkedIn Insight Tag is firing correctly on all pages including the marketing site, blog, pricing page, and demo booking flow. Website demographics report is populating.",
+          "recommendation": "No action needed. Tag health is excellent. Consider deploying CAPI (L02) for enhanced signal quality."
+        },
+        {
+          "id": "L02",
+          "check": "Conversions API (CAPI)",
+          "category": "Technical Setup",
+          "severity": "High",
+          "status": "PASS",
+          "finding": "LinkedIn CAPI is deployed via server-side GTM, sending Lead and Free Trial events. Match rate is 72%, above the recommended minimum.",
+          "recommendation": "No action needed. Match rate is healthy. Monitor monthly for any degradation in event quality scores."
+        },
+        {
+          "id": "L03",
+          "check": "Job title targeting precision",
+          "category": "Audience Quality",
+          "severity": "High",
+          "status": "PASS",
+          "finding": "Job title targeting is using specific titles: 'Project Manager', 'Program Manager', 'PMO Director', 'VP of Operations', 'Head of Engineering'. Well-aligned with CloudSync Pro's ICP.",
+          "recommendation": "No action needed. Consider testing additional titles like 'Scrum Master', 'Delivery Manager', and 'Chief of Staff' to expand reach within the ICP."
+        },
+        {
+          "id": "L06",
+          "check": "Matched Audiences",
+          "category": "Audience Quality",
+          "severity": "High",
+          "status": "WARNING",
+          "finding": "Website retargeting audience is active (12,400 members) but no contact list audience has been uploaded. Missing the opportunity to create ABM-style campaigns from CRM data.",
+          "recommendation": "Upload the CRM contact list (minimum 1,000 emails) as a Matched Audience. Create a Matched Audience campaign targeting high-value accounts from the sales pipeline. LinkedIn typically matches 30-60% of B2B email lists."
+        },
+        {
+          "id": "L10",
+          "check": "Thought Leader Ads (TLAs)",
+          "category": "Creative & Formats",
+          "severity": "High",
+          "status": "FAIL",
+          "finding": "No Thought Leader Ads are running. All campaigns use standard Sponsored Content with company page creative. TLAs typically achieve CPC of $2.29-$4.14 vs the current account average of $11.87.",
+          "recommendation": "Identify 2-3 company executives or product leaders with active LinkedIn profiles. Boost their best-performing organic posts as Thought Leader Ads. Allocate 30-40% of LinkedIn budget to TLAs. Expected CPC reduction: 65-80%.",
+          "estimatedTime": "15 min",
+          "isQuickWin": true
+        },
+        {
+          "id": "L11",
+          "check": "Ad format diversity",
+          "category": "Creative & Formats",
+          "severity": "High",
+          "status": "WARNING",
+          "finding": "Only single image Sponsored Content is being used. No video, document/carousel, or conversation ads have been tested.",
+          "recommendation": "Test document ads (PDF carousel) for gated content like whitepapers and case studies — these typically see 3x higher engagement for B2B. Add video ads for product demos. Aim for 2+ formats per campaign."
+        },
+        {
+          "id": "L14",
+          "check": "Lead Gen Form optimization",
+          "category": "Lead Gen Forms",
+          "severity": "High",
+          "status": "PASS",
+          "finding": "Lead Gen Forms have 4 fields: Name, Email, Company, Job Title. Form completion rate is 11.2%, close to the 13% benchmark.",
+          "recommendation": "No major action needed. Consider A/B testing a 3-field version (removing Job Title, which LinkedIn can auto-fill) to potentially increase completion rate."
+        },
+        {
+          "id": "L15",
+          "check": "Lead Gen Form CRM integration",
+          "category": "Lead Gen Forms",
+          "severity": "High",
+          "status": "WARNING",
+          "finding": "Lead Gen Form data is being manually downloaded as CSV every 3 days and uploaded to HubSpot. This creates a 1-3 day delay in lead follow-up, reducing conversion rates.",
+          "recommendation": "Set up a direct integration between LinkedIn and HubSpot using Zapier, the native HubSpot-LinkedIn integration, or LinkedIn's webhook API. Leads should sync to CRM within minutes, not days. Speed-to-lead is critical for B2B SaaS."
+        }
+      ]
+    },
+    {
+      "platform": "tiktok",
+      "name": "TikTok Ads",
+      "score": 55,
+      "grade": "D",
+      "budgetShare": 0.05,
+      "categories": [
+        {
+          "name": "Creative Quality",
+          "weight": 0.30,
+          "score": 40,
+          "totalChecks": 12,
+          "passed": 3,
+          "warnings": 3,
+          "failed": 6,
+          "na": 0
+        },
+        {
+          "name": "Technical Setup",
+          "weight": 0.25,
+          "score": 65,
+          "totalChecks": 2,
+          "passed": 1,
+          "warnings": 1,
+          "failed": 0,
+          "na": 0
+        },
+        {
+          "name": "Bidding & Learning",
+          "weight": 0.20,
+          "score": 55,
+          "totalChecks": 3,
+          "passed": 1,
+          "warnings": 1,
+          "failed": 1,
+          "na": 0
+        },
+        {
+          "name": "Structure & Settings",
+          "weight": 0.15,
+          "score": 60,
+          "totalChecks": 5,
+          "passed": 2,
+          "warnings": 2,
+          "failed": 1,
+          "na": 0
+        },
+        {
+          "name": "Performance",
+          "weight": 0.10,
+          "score": 70,
+          "totalChecks": 3,
+          "passed": 2,
+          "warnings": 1,
+          "failed": 0,
+          "na": 0
+        }
+      ],
+      "checks": [
+        {
+          "id": "T01",
+          "check": "TikTok Pixel installed",
+          "category": "Technical Setup",
+          "severity": "Critical",
+          "status": "PASS",
+          "finding": "TikTok Pixel is installed and firing PageView, ClickButton, and SubmitForm events on all key pages. Event data is appearing in TikTok Events Manager.",
+          "recommendation": "No action needed. Consider deploying Events API (T02) for enhanced signal quality."
+        },
+        {
+          "id": "T02",
+          "check": "Events API + ttclid",
+          "category": "Technical Setup",
+          "severity": "High",
+          "status": "WARNING",
+          "finding": "Events API is active but ttclid (TikTok Click ID) is not being captured and passed back with conversion events. Without ttclid, many conversions cannot be attributed back to ad clicks.",
+          "recommendation": "Update the landing page to capture the ttclid parameter from the URL on first load, store it in a session cookie, and pass it with all server-side conversion events. This is critical for TikTok's attribution model.",
+          "estimatedTime": "1-2 hours"
+        },
+        {
+          "id": "T05",
+          "check": "Creative volume",
+          "category": "Creative Quality",
+          "severity": "Critical",
+          "status": "FAIL",
+          "finding": "Only 2 creative assets per ad group (both are repurposed LinkedIn static images with text overlay). TikTok recommends a minimum of 6 diverse creatives per ad group for optimal delivery.",
+          "recommendation": "Create at least 6 TikTok-native video creatives per ad group. Use creator-style content, screen recordings with voiceover, customer testimonials, and trending formats. Consider using TikTok Creative Center for inspiration and CapCut for editing.",
+          "estimatedTime": "1-2 days"
+        },
+        {
+          "id": "T07",
+          "check": "Native-looking content",
+          "category": "Creative Quality",
+          "severity": "High",
+          "status": "FAIL",
+          "finding": "All ads are polished corporate-style content repurposed from LinkedIn. The ads include formal headshots, branded graphics, and corporate messaging that feels out of place on TikTok's casual, creator-driven platform.",
+          "recommendation": "Create TikTok-native content that looks organic. Use founder/employee talking-head videos, casual screen recordings, 'day in the life' formats, and trending audio. Ads should be indistinguishable from organic content. Consider partnering with micro-creators in the productivity/SaaS space.",
+          "estimatedTime": "1-2 days"
+        },
+        {
+          "id": "T12",
+          "check": "Budget sufficiency",
+          "category": "Bidding & Learning",
+          "severity": "High",
+          "status": "FAIL",
+          "finding": "Daily budget is $75 across 2 ad groups ($37.50 each) with a target CPA of $120. This gives only 0.3x CPA per ad group per day, far below the recommended 50x CPA for adequate learning.",
+          "recommendation": "Either consolidate to 1 ad group with the full $75/day budget and lower optimization to a higher-funnel event (like landing page views), or increase the TikTok budget to at least $250/day if maintaining conversion optimization. Current budget is insufficient for TikTok's learning algorithm.",
+          "estimatedTime": "15 min"
+        },
+        {
+          "id": "T14",
+          "check": "Search Ads Toggle",
+          "category": "Structure & Settings",
+          "severity": "High",
+          "status": "FAIL",
+          "finding": "Search Ads Toggle is disabled on all campaigns. Missing TikTok's search inventory where users actively search for solutions, which offers higher intent than feed placement alone.",
+          "recommendation": "Enable Search Ads Toggle on all conversion-focused campaigns. TikTok Search Ads reach users with active intent and typically deliver higher CVR than in-feed alone. No additional budget required — it uses existing campaign budget.",
+          "estimatedTime": "2 min",
+          "isQuickWin": true
+        }
+      ]
+    },
+    {
+      "platform": "microsoft",
+      "name": "Microsoft Ads",
+      "score": 68,
+      "grade": "C",
+      "budgetShare": 0.05,
+      "categories": [
+        {
+          "name": "Technical Setup",
+          "weight": 0.25,
+          "score": 75,
+          "totalChecks": 3,
+          "passed": 2,
+          "warnings": 1,
+          "failed": 0,
+          "na": 0
+        },
+        {
+          "name": "Syndication & Bidding",
+          "weight": 0.20,
+          "score": 65,
+          "totalChecks": 4,
+          "passed": 1,
+          "warnings": 2,
+          "failed": 1,
+          "na": 0
+        },
+        {
+          "name": "Structure & Audience",
+          "weight": 0.20,
+          "score": 70,
+          "totalChecks": 3,
+          "passed": 1,
+          "warnings": 1,
+          "failed": 1,
+          "na": 0
+        },
+        {
+          "name": "Creative & Extensions",
+          "weight": 0.20,
+          "score": 60,
+          "totalChecks": 5,
+          "passed": 1,
+          "warnings": 2,
+          "failed": 2,
+          "na": 0
+        },
+        {
+          "name": "Settings & Performance",
+          "weight": 0.15,
+          "score": 65,
+          "totalChecks": 5,
+          "passed": 2,
+          "warnings": 2,
+          "failed": 1,
+          "na": 0
+        }
+      ],
+      "checks": [
+        {
+          "id": "MS01",
+          "check": "UET tag installed",
+          "category": "Technical Setup",
+          "severity": "Critical",
+          "status": "PASS",
+          "finding": "Universal Event Tracking tag is installed and firing on all pages. Conversion goals for Demo Request and Free Trial are tracked and reporting.",
+          "recommendation": "No action needed. UET tag health is good."
+        },
+        {
+          "id": "MS03",
+          "check": "Google Ads import validation",
+          "category": "Technical Setup",
+          "severity": "High",
+          "status": "WARNING",
+          "finding": "Campaigns were imported from Google Ads via Quick Import. Most settings transferred correctly, but 3 sitelink extensions have broken destination URLs and the tracking template is not passing Microsoft Click ID (MSCLKID).",
+          "recommendation": "Fix the 3 broken sitelink URLs and update the tracking template to include {msclkid} parameter. Validate all conversion goals are tracking independently from Google. Set up a monthly import sync review.",
+          "estimatedTime": "15 min"
+        },
+        {
+          "id": "MS04",
+          "check": "Brand syndication control",
+          "category": "Syndication & Bidding",
+          "severity": "Critical",
+          "status": "FAIL",
+          "finding": "Brand campaign 'CloudSync_Brand' is running on syndicated search partners without any exclusions. Partner network traffic shows 0.3% CTR vs 8.2% on Bing.com, suggesting low-quality partner inventory is consuming $180/month of brand budget with no conversions.",
+          "recommendation": "Exclude syndicated search partners from the brand campaign immediately. Review partner-level performance data and create an exclusion list for underperforming partners on non-brand campaigns as well.",
+          "estimatedTime": "10 min",
+          "isQuickWin": true
+        },
+        {
+          "id": "MS10",
+          "check": "LinkedIn profile targeting",
+          "category": "Structure & Audience",
+          "severity": "High",
+          "status": "FAIL",
+          "finding": "LinkedIn profile targeting is not being used on any campaigns. This is Microsoft's unique B2B advantage — the ability to layer LinkedIn job function, industry, and company targeting on search ads.",
+          "recommendation": "Enable LinkedIn profile targeting on all non-brand campaigns. Layer 'Job Function: IT' + 'Seniority: Senior/Manager/Director' + 'Industry: Technology' to reach CloudSync Pro's ICP directly on search. This feature is exclusive to Microsoft Ads.",
+          "estimatedTime": "10 min",
+          "isQuickWin": true
+        },
+        {
+          "id": "MS14",
+          "check": "Copilot placement",
+          "category": "Settings & Performance",
+          "severity": "Medium",
+          "status": "FAIL",
+          "finding": "Copilot chat placement is not enabled for the PMax campaign. Missing 73% higher CTR and 16% higher conversion rate opportunity from Microsoft Copilot's conversational search inventory.",
+          "recommendation": "Enable Copilot chat placement in PMax campaign settings. Copilot users show 194% higher purchase intent and 33% shorter customer journeys. This is a quick toggle with high potential impact for B2B SaaS discovery.",
+          "estimatedTime": "2 min",
+          "isQuickWin": true
+        }
+      ]
+    }
+  ],
+  "budget": {
+    "totalMonthly": 45000,
+    "allocations": [
+      {
+        "platform": "google",
+        "currentPercent": 40,
+        "recommendedPercent": 38,
+        "monthlySpend": 18000,
+        "recommendedSpend": 17100
+      },
+      {
+        "platform": "meta",
+        "currentPercent": 30,
+        "recommendedPercent": 25,
+        "monthlySpend": 13500,
+        "recommendedSpend": 11250
+      },
+      {
+        "platform": "linkedin",
+        "currentPercent": 20,
+        "recommendedPercent": 28,
+        "monthlySpend": 9000,
+        "recommendedSpend": 12600
+      },
+      {
+        "platform": "tiktok",
+        "currentPercent": 5,
+        "recommendedPercent": 3,
+        "monthlySpend": 2250,
+        "recommendedSpend": 1350
+      },
+      {
+        "platform": "microsoft",
+        "currentPercent": 5,
+        "recommendedPercent": 6,
+        "monthlySpend": 2250,
+        "recommendedSpend": 2700
+      }
+    ],
+    "scaleList": [
+      "Google Brand Search",
+      "LinkedIn ABM Campaigns",
+      "Meta Retargeting"
+    ],
+    "killList": [
+      "TikTok Broad Awareness Campaign",
+      "Microsoft Display Network"
+    ]
+  },
+  "benchmarks": [
+    {
+      "metric": "Google Search CTR",
+      "actual": 4.8,
+      "benchmark": 4.28,
+      "unit": "%"
+    },
+    {
+      "metric": "Google Search CPC",
+      "actual": 6.42,
+      "benchmark": 5.75,
+      "unit": "$"
+    },
+    {
+      "metric": "Google Search CVR",
+      "actual": 1.42,
+      "benchmark": 1.65,
+      "unit": "%"
+    },
+    {
+      "metric": "Cost Per Lead (Google)",
+      "actual": 168,
+      "benchmark": 150,
+      "unit": "$"
+    },
+    {
+      "metric": "Meta CPL",
+      "actual": 94,
+      "benchmark": 85,
+      "unit": "$"
+    },
+    {
+      "metric": "Meta CTR",
+      "actual": 0.82,
+      "benchmark": 1.0,
+      "unit": "%"
+    },
+    {
+      "metric": "LinkedIn CPL",
+      "actual": 142,
+      "benchmark": 125,
+      "unit": "$"
+    },
+    {
+      "metric": "Blended ROAS",
+      "actual": 2.8,
+      "benchmark": 3.5,
+      "unit": "x"
+    }
+  ],
+  "creativeAlerts": [
+    {
+      "platform": "meta",
+      "type": "fatigue",
+      "severity": "Critical",
+      "message": "3 creatives showing fatigue signals",
+      "detail": "CTR declined 25%+ over 14 days on 3 of 5 active creatives. Prospecting ad set frequency at 4.8 (threshold: 3.0). The 'Product Dashboard Screenshot' ad has been running for 67 days without refresh. Immediate creative rotation needed."
+    },
+    {
+      "platform": "meta",
+      "type": "missing_format",
+      "severity": "High",
+      "message": "No video or carousel formats in use",
+      "detail": "Only static image ads are running across all Meta ad sets. Missing video (critical for Reels/Stories, 40%+ of inventory) and carousel formats. This limits Meta's Andromeda algorithm and excludes high-performing placements."
+    },
+    {
+      "platform": "tiktok",
+      "type": "low_diversity",
+      "severity": "Critical",
+      "message": "Only 2 creatives per ad group",
+      "detail": "TikTok ad groups contain only 2 repurposed LinkedIn static images with text overlay. Platform minimum recommendation is 6 diverse video creatives per ad group. Current creative does not match TikTok's native, creator-driven content style."
+    },
+    {
+      "platform": "tiktok",
+      "type": "spec_violation",
+      "severity": "High",
+      "message": "No vertical video assets (9:16)",
+      "detail": "All TikTok creatives are 1:1 square format repurposed from other platforms. TikTok requires 9:16 vertical video (1080x1920) for optimal performance. Non-vertical content loses significant screen real estate and engagement."
+    },
+    {
+      "platform": "google",
+      "type": "missing_format",
+      "severity": "Medium",
+      "message": "PMax campaigns missing video assets",
+      "detail": "Performance Max asset groups contain only 8 images and 2 logos but 0 native videos. Google auto-generates low-quality videos when none are provided. Upload native videos in 16:9, 1:1, and 9:16 formats for better YouTube and Discover performance."
+    },
+    {
+      "platform": "linkedin",
+      "type": "low_diversity",
+      "severity": "Medium",
+      "message": "Single ad format across all campaigns",
+      "detail": "All LinkedIn campaigns use only single image Sponsored Content. Missing high-performing formats: Document Ads (PDF carousels, 3x engagement for B2B), Video Ads, and Thought Leader Ads (65-80% lower CPC)."
+    }
+  ],
+  "quickWins": [
+    {
+      "id": "G12",
+      "check": "Network settings",
+      "category": "Account Structure",
+      "severity": "High",
+      "status": "FAIL",
+      "finding": "Display Network is enabled on 2 of 4 Search campaigns ('CloudSync_NB_Competitors' and 'CloudSync_NB_Features'). Display traffic accounts for $890/mo with 0 conversions in the last 60 days.",
+      "recommendation": "Immediately disable Display Network on all Search campaigns. This is wasting approximately $890/month with zero return. If Display is desired, create a dedicated Display campaign with appropriate targeting.",
+      "estimatedTime": "2 min",
+      "isQuickWin": true
+    },
+    {
+      "id": "G-CT1",
+      "check": "No duplicate counting",
+      "category": "Conversion Tracking",
+      "severity": "Critical",
+      "status": "FAIL",
+      "finding": "Both GA4 import and native Google Ads tag are counting the Demo Request conversion. This is inflating reported conversions by approximately 23%, causing Smart Bidding to optimize toward a misleadingly low CPA.",
+      "recommendation": "Remove the GA4 imported Demo Request goal and rely solely on the native Google Ads conversion tag, or vice versa. Verify with the Conversions > Diagnostics report that counts normalize within 48 hours.",
+      "estimatedTime": "10 min",
+      "isQuickWin": true
+    },
+    {
+      "id": "T14",
+      "check": "Search Ads Toggle",
+      "category": "Structure & Settings",
+      "severity": "High",
+      "status": "FAIL",
+      "finding": "Search Ads Toggle is disabled on all campaigns. Missing TikTok's search inventory where users actively search for solutions, which offers higher intent than feed placement alone.",
+      "recommendation": "Enable Search Ads Toggle on all conversion-focused campaigns. TikTok Search Ads reach users with active intent and typically deliver higher CVR than in-feed alone. No additional budget required — it uses existing campaign budget.",
+      "estimatedTime": "2 min",
+      "isQuickWin": true
+    },
+    {
+      "id": "MS14",
+      "check": "Copilot placement",
+      "category": "Settings & Performance",
+      "severity": "Medium",
+      "status": "FAIL",
+      "finding": "Copilot chat placement is not enabled for the PMax campaign. Missing 73% higher CTR and 16% higher conversion rate opportunity from Microsoft Copilot's conversational search inventory.",
+      "recommendation": "Enable Copilot chat placement in PMax campaign settings. Copilot users show 194% higher purchase intent and 33% shorter customer journeys. This is a quick toggle with high potential impact for B2B SaaS discovery.",
+      "estimatedTime": "2 min",
+      "isQuickWin": true
+    },
+    {
+      "id": "G50",
+      "check": "Sitelink extensions",
+      "category": "Settings & Targeting",
+      "severity": "High",
+      "status": "WARNING",
+      "finding": "Only 2 sitelinks configured across campaigns: 'Pricing' and 'Features'. Missing key pages like 'Free Trial', 'Customer Stories', 'Integrations', and 'Enterprise'.",
+      "recommendation": "Add at least 4 sitelinks per campaign including: Free Trial, Customer Stories/Case Studies, Integrations, Enterprise Plan, and Product Tour. More sitelinks improve ad rank and CTR.",
+      "estimatedTime": "10 min",
+      "isQuickWin": true
+    }
+  ],
+  "topIssues": [
+    {
+      "id": "M02",
+      "check": "Conversions API (CAPI) active",
+      "category": "Pixel/CAPI Health",
+      "severity": "Critical",
+      "status": "FAIL",
+      "finding": "CAPI is not deployed. Relying solely on the browser-side Meta Pixel, which loses an estimated 30-40% of conversion data due to iOS 14.5+ App Tracking Transparency opt-outs and browser privacy restrictions.",
+      "recommendation": "Deploy CAPI via Meta's CAPI Gateway (simplest option, ~15 min setup) or integrate server-side through GTM Server-Side. This is the single highest-impact fix for Meta performance. Expected: 20-30% improvement in reported conversions and signal quality.",
+      "estimatedTime": "15 min",
+      "isQuickWin": true
+    },
+    {
+      "id": "G-CT1",
+      "check": "No duplicate counting",
+      "category": "Conversion Tracking",
+      "severity": "Critical",
+      "status": "FAIL",
+      "finding": "Both GA4 import and native Google Ads tag are counting the Demo Request conversion. This is inflating reported conversions by approximately 23%, causing Smart Bidding to optimize toward a misleadingly low CPA.",
+      "recommendation": "Remove the GA4 imported Demo Request goal and rely solely on the native Google Ads conversion tag, or vice versa. Verify with the Conversions > Diagnostics report that counts normalize within 48 hours.",
+      "estimatedTime": "10 min",
+      "isQuickWin": true
+    },
+    {
+      "id": "M25",
+      "check": "Creative format diversity",
+      "category": "Creative",
+      "severity": "Critical",
+      "status": "FAIL",
+      "finding": "Only static image ads are running across all ad sets. No video or carousel formats are being tested. This severely limits Meta's Andromeda algorithm from finding optimal placements, especially Reels and Stories.",
+      "recommendation": "Create 9:16 vertical video ads (even simple motion graphics or screen recordings of the product) and carousel ads showcasing features. Target at least 3 formats per ad set. Video is critical for Reels/Stories placement which now represents 40%+ of Meta inventory.",
+      "estimatedTime": "2-3 hours"
+    },
+    {
+      "id": "G16",
+      "check": "Wasted spend on irrelevant terms",
+      "category": "Wasted Spend",
+      "severity": "Critical",
+      "status": "FAIL",
+      "finding": "11.2% of total search spend ($2,016/mo) is going to irrelevant search terms including informational queries, job searches, and competitor brand misspellings. This exceeds the 5% threshold significantly.",
+      "recommendation": "Add comprehensive negative keyword lists for job-related, educational, free-tier, and competitor terms. Implement weekly search term reviews until irrelevant spend drops below 5%. Estimated monthly savings: $1,500+.",
+      "estimatedTime": "30 min",
+      "isQuickWin": true
+    },
+    {
+      "id": "MS04",
+      "check": "Brand syndication control",
+      "category": "Syndication & Bidding",
+      "severity": "Critical",
+      "status": "FAIL",
+      "finding": "Brand campaign 'CloudSync_Brand' is running on syndicated search partners without any exclusions. Partner network traffic shows 0.3% CTR vs 8.2% on Bing.com, suggesting low-quality partner inventory is consuming $180/month of brand budget with no conversions.",
+      "recommendation": "Exclude syndicated search partners from the brand campaign immediately. Review partner-level performance data and create an exclusion list for underperforming partners on non-brand campaigns as well.",
+      "estimatedTime": "10 min",
+      "isQuickWin": true
+    }
+  ]
+}

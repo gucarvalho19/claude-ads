@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Navy palette */
+  --color-navy-50: #f0f4f8;
+  --color-navy-100: #d9e2ec;
+  --color-navy-200: #bcccdc;
+  --color-navy-300: #9fb3c8;
+  --color-navy-400: #829ab1;
+  --color-navy-500: #627d98;
+  --color-navy-600: #486581;
+  --color-navy-700: #334e68;
+  --color-navy-800: #243b53;
+  --color-navy-900: #102a43;
+
+  /* Accent */
+  --color-amber-accent: #ed8936;
+  --color-amber-light: #f6ad55;
+  --color-amber-dark: #c05621;
+
+  /* Score colors */
+  --color-score-pass: #38a169;
+  --color-score-warning: #d69e2e;
+  --color-score-fail: #e53e3e;
+  --color-score-na: #a0aec0;
+
+  /* Grade colors */
+  --color-grade-a: #38a169;
+  --color-grade-b: #68d391;
+  --color-grade-c: #d69e2e;
+  --color-grade-d: #ed8936;
+  --color-grade-f: #e53e3e;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy-400);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-navy-600);
+}
